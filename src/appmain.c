@@ -125,7 +125,7 @@ static esp_err_t mqtt_event_handler(esp_mqtt_event_handle_t event)
 static void mqtt_app_start(void)
 {
     const esp_mqtt_client_config_t mqtt_cfg = {
-        .uri = "wss://iot.eclipse.org:443/ws",
+        .uri = "heppners.net",
         .event_handle = mqtt_event_handler,
         .cert_pem = (const char *)iot_eclipse_org_pem_start,
     };
