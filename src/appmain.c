@@ -25,9 +25,10 @@ static const char *TAG = "MQTTWSS_SAMPLE";
 static EventGroupHandle_t wifi_event_group;
 const static int CONNECTED_BIT = BIT0;
 
-#define CONFIG_WIFI_SSID "heppners.net"
-#define CONFIG_WIFI_PASSWORD "Tinroof36"
-
+//#define CONFIG_WIFI_SSID "heppners.net"
+//#define CONFIG_WIFI_PASSWORD "Tinroof36"
+#define CONFIG_WIFI_SSID "Heatmor Office"
+#define CONFIG_WIFI_PASSWORD "HeatmorOffice"
 
 
 static esp_err_t wifi_event_handler(void *ctx, system_event_t *event)
@@ -125,7 +126,7 @@ static esp_err_t mqtt_event_handler(esp_mqtt_event_handle_t event)
 static void mqtt_app_start(void)
 {
     const esp_mqtt_client_config_t mqtt_cfg = {
-        .uri = "heppners.net",
+        .uri = "mqtt://www.heppners.net",
         .event_handle = mqtt_event_handler,
         .cert_pem = (const char *)iot_eclipse_org_pem_start,
     };
